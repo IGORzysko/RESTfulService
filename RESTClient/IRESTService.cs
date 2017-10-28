@@ -13,13 +13,15 @@ namespace RESTClient
     {
         [OperationContract]
         [WebInvoke(Method = "GET", 
-            BodyStyle = WebMessageBodyStyle.Wrapped, 
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            ResponseFormat = WebMessageFormat.Xml, 
             UriTemplate = "xml/{value}")]
         string GetDataXML(string value);
 
         [OperationContract]
         [WebInvoke(Method = "GET",
             BodyStyle = WebMessageBodyStyle.Wrapped,
+            ResponseFormat = WebMessageFormat.Json,
             UriTemplate = "json/{value}")]
         string GetDataJSON(string value);
 
