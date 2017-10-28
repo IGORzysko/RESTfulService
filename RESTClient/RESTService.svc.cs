@@ -10,9 +10,13 @@ namespace RESTClient
 {
     public class RESTService : IRESTService
     {
-        public string GetData(int value)
+        public string GetDataXML(string value)
         {
-            // master branch test 
+            return string.Format("You entered: {0}", value);
+        }
+
+        public string GetDataJSON(string value)
+        {
             return string.Format("You entered: {0}", value);
         }
 

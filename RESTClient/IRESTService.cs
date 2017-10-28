@@ -12,32 +12,20 @@ namespace RESTClient
     public interface IRESTService
     {
         [OperationContract]
-        string GetData(int value);
+        [WebInvoke(Method = "GET", 
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            ResponseFormat = WebMessageFormat.Xml, 
+            UriTemplate = "xml/{value}")]
+        string GetDataXML(string value);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET",
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            ResponseFormat = WebMessageFormat.Json,
+            UriTemplate = "json/{value}")]
+        string GetDataJSON(string value);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
-
-        // TODO: Add your service operations here
-    }
-
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
     }
 }
