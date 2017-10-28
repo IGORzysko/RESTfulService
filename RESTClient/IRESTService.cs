@@ -14,14 +14,14 @@ namespace RESTClient
         [OperationContract]
         [WebInvoke(Method = "GET", 
             BodyStyle = WebMessageBodyStyle.Wrapped, 
-            UriTemplate = "xml/{id}")]
-        string GetDataXML(int value);
+            UriTemplate = "xml/{value}")]
+        string GetDataXML(string value);
 
         [OperationContract]
         [WebInvoke(Method = "GET",
             BodyStyle = WebMessageBodyStyle.Wrapped,
-            UriTemplate = "json/{id}")]
-        string GetDataJSON(int value);
+            UriTemplate = "json/{value}")]
+        string GetDataJSON(string value);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
