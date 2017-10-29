@@ -15,21 +15,22 @@ namespace RESTClient
         [WebInvoke(Method = "GET", 
             BodyStyle = WebMessageBodyStyle.Wrapped,
             ResponseFormat = WebMessageFormat.Xml, 
-            UriTemplate = "xml/{id}")]
-        string GetDataXML(string id);
+            UriTemplate = "/xml/{id}")]
+        string GetDataXML (string id);
 
         [OperationContract]
         [WebInvoke(Method = "GET",
             BodyStyle = WebMessageBodyStyle.Wrapped,
             ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "json/{id}")]
-        string GetDataJSON(string id);
+            UriTemplate = "/json/{id}")]
+        string GetDataJSON (string id);
 
         [OperationContract]
         [WebInvoke(Method = "POST",
             BodyStyle = WebMessageBodyStyle.Wrapped,
+            RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "getDataUsingDataContract/{id}")]
-        Response GetDataUsingDataContract(Request composite);
+            UriTemplate = "/getDataUsingDataContract")]
+        Response GetDataUsingDataContract (Request composite);
     }
 }
