@@ -14,6 +14,8 @@ namespace RESTClient
         {
             try
             {
+                // implement logic here ...
+
                 return string.Format("You entered: {0}", id);
             }
             catch (Exception ex)
@@ -26,6 +28,8 @@ namespace RESTClient
         {
             try
             {
+                // implement logic here ...
+
                 return string.Format("You entered: {0}", id);
             }
             catch (Exception ex)
