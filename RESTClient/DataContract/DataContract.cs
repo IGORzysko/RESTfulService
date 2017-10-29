@@ -9,15 +9,7 @@ namespace RESTClient
     [DataContract]
     public class Request : RequestBase
     {
-        int id;
         string stringValue = "";
-
-        [DataMember]
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
 
         [DataMember]
         public string StringValue
@@ -28,7 +20,7 @@ namespace RESTClient
     }
 
     [DataContract]
-    public class Response
+    public class Response : ResponseBase
     {
         string stringValue = "";
 

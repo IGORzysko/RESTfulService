@@ -30,7 +30,7 @@ namespace RESTClient
             BodyStyle = WebMessageBodyStyle.Wrapped,
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "/getDataUsingDataContract")]
-        Response GetDataUsingDataContract (Request composite);
+            UriTemplate = "/GetData")]
+        Response GetData (Request composite);
     }
 }

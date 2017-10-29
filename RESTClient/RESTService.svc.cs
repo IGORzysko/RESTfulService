@@ -34,7 +34,7 @@ namespace RESTClient
             }
         }
 
-        public Response GetDataUsingDataContract(Request request)
+        public Response GetData(Request request)
         {
             try
             {
