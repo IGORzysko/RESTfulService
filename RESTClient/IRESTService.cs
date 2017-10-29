@@ -12,7 +12,7 @@ namespace RESTClient
     public interface IRESTService
     {
         [OperationContract]
-        [WebInvoke(Method = "GET", 
+        [WebInvoke(Method = "GET",           
             BodyStyle = WebMessageBodyStyle.Wrapped,
             ResponseFormat = WebMessageFormat.Xml, 
             UriTemplate = "/xml/{id}")]
@@ -30,7 +30,7 @@ namespace RESTClient
             BodyStyle = WebMessageBodyStyle.Wrapped,
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "/getDataUsingDataContract")]
-        Response GetDataUsingDataContract (Request composite);
+            UriTemplate = "/GetData")]
+        Response GetData (Request composite);
     }
 }

@@ -9,13 +9,24 @@ namespace RESTClient
     [DataContract]
     public class RequestBase
     {
+        public RequestBase ()
+        {
+
+        }
+
         int id;
 
         [DataMember]
         public int Id
         {
-            get { return id; }
-            set { id = value; }
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
         }
     }
 }
