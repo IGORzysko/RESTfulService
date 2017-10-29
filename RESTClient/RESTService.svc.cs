@@ -10,27 +10,42 @@ namespace RESTClient
 {
     public class RESTService : IRESTService
     {
-        public string GetDataXML(string value)
+        public string GetDataXML(string id)
         {
-            return string.Format("You entered: {0}", value);
+            try
+            {
+                return string.Format("You entered: {0}", id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
         }
 
-        public string GetDataJSON(string value)
+        public string GetDataJSON(string id)
         {
-            return string.Format("You entered: {0}", value);
+            try
+            {
+                return string.Format("You entered: {0}", id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public Response GetDataUsingDataContract(Request request)
         {
-            if (composite == null)
+            try
             {
-                throw new ArgumentNullException("composite");
+                // implement logic here ...
+
+                return new Response();
             }
-            if (composite.BoolValue)
+            catch (Exception ex)
             {
-                composite.StringValue += "Suffix";
+                throw new Exception(ex.Message, ex);
             }
-            return composite;
         }
     }
 }

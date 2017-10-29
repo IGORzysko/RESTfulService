@@ -7,17 +7,30 @@ using System.Web;
 namespace RESTClient
 {
     [DataContract]
-    public class CompositeType
+    public class Request : RequestBase
     {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+        int id;
+        string stringValue = "";
 
         [DataMember]
-        public bool BoolValue
+        public int Id
         {
-            get { return boolValue; }
-            set { boolValue = value; }
+            get { return id; }
+            set { id = value; }
         }
+
+        [DataMember]
+        public string StringValue
+        {
+            get { return stringValue; }
+            set { stringValue = value; }
+        }
+    }
+
+    [DataContract]
+    public class Response
+    {
+        string stringValue = "";
 
         [DataMember]
         public string StringValue
