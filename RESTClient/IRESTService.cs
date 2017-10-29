@@ -12,7 +12,7 @@ namespace RESTClient
     public interface IRESTService
     {
         [OperationContract]
-        [WebInvoke(Method = "GET", 
+        [WebInvoke(Method = "GET",           
             BodyStyle = WebMessageBodyStyle.Wrapped,
             ResponseFormat = WebMessageFormat.Xml, 
             UriTemplate = "/xml/{id}")]

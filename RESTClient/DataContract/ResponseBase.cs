@@ -9,6 +9,9 @@ namespace RESTClient
     [DataContract]
     public class ResponseBase
     {
-        
+        public ResponseBase ()
+        {
+
+        }
     }
 }

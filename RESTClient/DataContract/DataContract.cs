@@ -14,8 +14,14 @@ namespace RESTClient
         [DataMember]
         public string StringValue
         {
-            get { return stringValue; }
-            set { stringValue = value; }
+            get
+            {
+                return stringValue;
+            }
+            set
+            {
+                stringValue = value;
+            }
         }
     }
 
@@ -27,8 +33,14 @@ namespace RESTClient
         [DataMember]
         public string StringValue
         {
-            get { return stringValue; }
-            set { stringValue = value; }
+            get
+            {
+                return stringValue;
+            }
+            set
+            {
+                stringValue = value;
+            }
         }
     }
 }
