@@ -51,5 +51,19 @@ namespace RESTClient
                 throw new Exception(ex.Message, ex);
             }
         }
+
+        public Response GetDataXml (Request request)
+        {
+            try
+            {
+                // implement logic here ...
+
+                return new Response();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
     }
 }

@@ -32,5 +32,13 @@ namespace RESTClient
             ResponseFormat = WebMessageFormat.Json,
             UriTemplate = "/GetData")]
         Response GetData (Request composite);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST",
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            RequestFormat = WebMessageFormat.Xml,
+            ResponseFormat = WebMessageFormat.Xml,
+            UriTemplate = "/GetDataXml")]
+        Response GetDataXml(Request composite);
     }
 }

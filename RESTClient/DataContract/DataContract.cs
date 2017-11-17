@@ -28,6 +28,8 @@ namespace RESTClient
                 stringValue = value;
             }
         }
+
+        public Request RequestProp { get; set; }
     }
 
     [DataContract]
@@ -52,5 +54,7 @@ namespace RESTClient
                 stringValue = value;
             }
         }
+
+        public Response ResponseProp { get; set; }
     }
 }
