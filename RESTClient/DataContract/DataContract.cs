@@ -9,6 +9,11 @@ namespace RESTClient
     [DataContract]
     public class Request : RequestBase
     {
+        public Request ()
+        {
+
+        }
+
         string stringValue;
 
         [DataMember]
@@ -28,6 +33,11 @@ namespace RESTClient
     [DataContract]
     public class Response : ResponseBase
     {
+        public Response ()
+        {
+
+        }
+
         string stringValue;
 
         [DataMember]
