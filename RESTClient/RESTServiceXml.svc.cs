@@ -10,7 +10,7 @@ namespace RESTClient
 {
     public class RESTServiceXml : IRESTServiceXml
     {
-        public string GetData (string id)
+        public string GetDataId (string id)
         {
             try
             {
