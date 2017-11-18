@@ -8,37 +8,6 @@ using System.Text;
 
 namespace RESTClient
 {
-    public class RESTServiceXml : IRESTServiceXml
-    {
-        public string GetData (string id)
-        {
-            try
-            {
-                // implement logic here ...
-
-                return string.Format("You entered: {0}", id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message, ex);
-            }
-        }
-
-        public Response GetData (Request request)
-        {
-            try
-            {
-                // implement logic here ...
-
-                return new Response();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message, ex);
-            }
-        }
-    }
-
     public class RESTServiceJson : IRESTServiceJson
     {
         public string GetData (string id)

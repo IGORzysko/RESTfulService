@@ -88,7 +88,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RESTService.svc" />
+    <Content Include="RESTServiceXml.svc" />
+    <Content Include="RESTServiceJson.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,8 +97,11 @@
     <Compile Include="DataContract\RequestBase.cs" />
     <Compile Include="DataContract\DataContract.cs" />
     <Compile Include="Interfaces\IRESTServiceXML.cs" />
-    <Compile Include="RESTService.svc.cs">
-      <DependentUpon>RESTService.svc</DependentUpon>
+    <Compile Include="RESTServiceXml.svc.cs">
+      <DependentUpon>RESTServiceXml.svc</DependentUpon>
+    </Compile>
+    <Compile Include="RESTServiceJson.svc.cs">
+      <DependentUpon>RESTServiceJson.svc</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IRESTServiceJSON.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
