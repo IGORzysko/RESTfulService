@@ -8,9 +8,9 @@ using System.Text;
 
 namespace RESTClient
 {
-    public class RESTService : IRESTService
+    public class RESTServiceXml : IRESTServiceXml
     {
-        public string GetDataXML(string id)
+        public string GetData (string id)
         {
             try
             {
@@ -24,21 +24,7 @@ namespace RESTClient
             }
         }
 
-        public string GetDataJSON(string id)
-        {
-            try
-            {
-                // implement logic here ...
-
-                return string.Format("You entered: {0}", id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message, ex);
-            }
-        }
-
-        public Response GetData(Request request)
+        public Response GetData (Request request)
         {
             try
             {
@@ -51,8 +37,25 @@ namespace RESTClient
                 throw new Exception(ex.Message, ex);
             }
         }
+    }
 
-        public Response GetDataXml (Request request)
+    public class RESTServiceJson : IRESTServiceJson
+    {
+        public string GetData (string id)
+        {
+            try
+            {
+                // implement logic here ...
+
+                return string.Format("You entered: {0}", id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
+        public Response GetData (Request request)
         {
             try
             {
