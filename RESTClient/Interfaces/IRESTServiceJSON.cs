@@ -9,21 +9,14 @@ using System.Text;
 namespace RESTClient
 {
     [ServiceContract]
-    public interface IRESTService
+    public interface IRESTServiceJson
     {
-        [OperationContract]
-        [WebInvoke(Method = "GET",           
-            BodyStyle = WebMessageBodyStyle.Wrapped,
-            ResponseFormat = WebMessageFormat.Xml, 
-            UriTemplate = "/xml/{id}")]
-        string GetDataXML (string id);
-
         [OperationContract]
         [WebInvoke(Method = "GET",
             BodyStyle = WebMessageBodyStyle.Wrapped,
             ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "/json/{id}")]
-        string GetDataJSON (string id);
+            UriTemplate = "/{id}")]
+        string GetDataId (string id);
 
         [OperationContract]
         [WebInvoke(Method = "POST",
@@ -31,6 +24,6 @@ namespace RESTClient
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
             UriTemplate = "/GetData")]
-        Response GetData (Request composite);
+        Response GetData (Request request);
     }
 }
