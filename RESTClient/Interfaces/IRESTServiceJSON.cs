@@ -15,9 +15,9 @@ namespace RESTClient
         [WebInvoke(Method = "GET",
             BodyStyle = WebMessageBodyStyle.Wrapped,
             ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "/{id}")]
+            UriTemplate = "/GetData/?parameter={id}")]
         string GetDataId (string id);
-
+        
         [OperationContract]
         [WebInvoke(Method = "POST",
             BodyStyle = WebMessageBodyStyle.Wrapped,
