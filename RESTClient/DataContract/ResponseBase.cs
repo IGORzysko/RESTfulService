@@ -13,5 +13,20 @@ namespace RESTClient
         {
 
         }
+
+        int id;
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                value = id;
+            }
+        }
     }
 }
