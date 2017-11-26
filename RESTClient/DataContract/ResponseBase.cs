@@ -16,16 +16,16 @@ namespace RESTClient
 
         int id;
 
+        [DataMember]
         public int Id
         {
             get
             {
                 return id;
             }
-
             set
             {
-                value = id;
+                id = value;
             }
         }
     }
