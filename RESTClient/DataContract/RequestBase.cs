@@ -14,7 +14,7 @@ namespace RESTClient
 
         }
 
-        int id;
+        public int id;
 
         [DataMember]
         public int Id

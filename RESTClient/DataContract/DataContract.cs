@@ -9,7 +9,7 @@ namespace RESTClient
     [DataContract]
     public class Request : RequestBase
     {
-        string stringValue;
+        public string stringValue;
 
         [DataMember]
         public string StringValue
@@ -23,14 +23,12 @@ namespace RESTClient
                 stringValue = value;
             }
         }
-
-        public Request RequestProp { get; set; }
     }
 
     [DataContract]
     public class Response : ResponseBase
     {
-        string stringValue;
+        public string stringValue;
 
         [DataMember]
         public string StringValue
@@ -44,7 +42,5 @@ namespace RESTClient
                 stringValue = value;
             }
         }
-
-        public Response ResponseProp { get; set; }
     }
 }
