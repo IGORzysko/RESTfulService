@@ -16,7 +16,7 @@ namespace RESTClient
             {
                 // implement logic here ...
 
-                return string.Format("You entered: {0}", id);
+                return string.Format($"You entered: {id}");
             }
             catch (Exception ex)
             {
